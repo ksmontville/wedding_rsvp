@@ -1,0 +1,88 @@
+{% extends 'rsvp/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<head>
+    <style>
+
+        #overall {
+            font-family: Garamond;
+            text-align: center;
+            color: #85586F;
+            height: 614px;
+        }
+
+        #photo_us {
+            position: absolute;
+            left: 175;
+            top: 200;
+            border: 4px solid #DEB6AB;
+            border-radius: 10px;
+        }
+
+        #photo_cats {
+            position: absolute;
+            right: 75;
+            top: 200;
+            border: 4px solid #DEB6AB;
+            border-radius: 10px;
+        }
+
+        #div_form {
+            position: absolute;
+            left: 610;
+            top: 225;
+            border: 5px dotted #DEB6AB;
+            border-radius: 40px;
+            height: 450px;
+            width: 300px;
+        }
+
+        h1 {
+            margin-top: 20;
+            margin-bottom: 20
+            }
+
+        p {
+            font-size: 20;
+            margin-top: 10;
+            margin-bottom: 10;
+            }
+
+        button {
+                color: #F8ECD1;
+                background-color: #AC7D88;
+                border: none;
+                border-color: #F8ECD1;
+                border-radius: 8px;
+                border-width: 2px;
+                margin-top: 20;
+                margin-bottom: 20;
+                }
+
+            }
+    </style>
+</head>
+
+<div class="mt-3" id="overall">
+    <h1>We would love to have you!</h1>
+    <p id="1">Please complete the form below as confirmation for each person who will be attending the event.</p>
+    <p id="2"><b>Must complete all fields*</b></p>
+
+    <div id="photo_us">
+        <img src="https://i.ibb.co/K73cFZP/babe-n-me.jpg" width="379" height="384" class="rounded">
+    </div>
+
+    <div class="mt-3" id="photo_cats">
+        <img src="https://i.ibb.co/tXbxMLj/babe-n-cats.jpg" width="512" height="384" class="rounded">
+    </div>
+
+    <div class="mt-3" id="div_form">
+        <form action="{% url 'rsvp:index' %}" method="post" class="form" id="rsvp_form">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button name="submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
