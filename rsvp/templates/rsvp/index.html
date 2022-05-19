@@ -9,7 +9,6 @@
             font-family: Garamond;
             text-align: center;
             color: #85586F;
-            height: 614px;
         }
 
         #photo_us {
@@ -28,25 +27,8 @@
             border-radius: 10px;
         }
 
-        #div_form {
-            position: absolute;
-            left: 40%;
-            top: 33%;
-            border: 5px dotted #DEB6AB;
-            border-radius: 40px;
-            height: 450px;
-            width: 300px;
-        }
-
-        h1 {
-            margin-top: 20;
-            margin-bottom: 20
-            }
-
         p {
             font-size: 20;
-            margin-top: 10;
-            margin-bottom: 10;
             }
 
         button {
@@ -76,13 +58,11 @@
 <!--    <div class="mt-3" id="photo_cats">-->
 <!--        <img src="https://i.ibb.co/tXbxMLj/babe-n-cats.jpg" width="512" height="384" class="rounded">-->
 <!--    </div>-->
-
-    <div class="mt-3" id="div_form">
-        <form action="{% url 'rsvp:index' %}" method="post" class="form" id="rsvp_form">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <button name="submit">Submit</button>
-        </form>
-    </div>
+    <form action="{% url 'rsvp:index' %}" method="post" class="form" id="rsvp_form">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button name="submit">Submit</button>
+    </form>
 </div>
+
 {% endblock content %}
