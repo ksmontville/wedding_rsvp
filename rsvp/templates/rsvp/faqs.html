@@ -1,7 +1,161 @@
 {% extends 'rsvp/base.html' %}
 
 {% block content %}
+<head>
+    <style>
+        #pageHeading {
+            font-family: Georgia;
+            font-size: 40;
+            text-align: center;
+            color: #827397;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-right: 30%;
+            margin-left: 30%;
+        }
 
-FREQUENTLY ASKED QUESTIONS
+        #mainAccordion {
+            border: 4px solid #E9D5CA;
+            border-radius: 11px;
+        }
+
+        .accordion-button {
+            font-family: Georgia;
+            font-size: 25;
+            background: #827397;
+            color: #E9D5CA;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;\
+        }
+
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            font-family: Georgia;
+            font-size: 25;
+            background: #827397;
+            color: #E9D5CA;
+        }
+
+        .accordion-button:not(.collapsed)::After {
+            background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E9D5CA'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+        }
+
+        .accordion-body {
+            font-family: Georgia;
+            font-size: 20;
+            color: #827397;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div id="pageHeading">
+    Frequently Asked Questions
+</div>
+
+
+<div class="accordion" id="mainAccordion">
+
+    <div class="accordion-item" id="itemSeven">
+        <h2 class="accordion-header" id="headingSeven">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                  aria-expanded="false" aria-controls="collapseSeven" id="accordionButtonSeven">When and where did you meet?</button>
+        </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">We met in the summer of 2018 on an online dating website called OKCupid.
+              Kyle sent Liza a message about cats, they met shortly after for coffee and really hit it off
+                  (Kyle did not buy Liza her coffee at that first meeting, and he still hears about it to this day).
+                  From there the relationship quickly blossomed into marriage and a strong desire to own even more cats!
+              </div>
+            </div>
+    </div>
+
+    <div class="accordion-item" id="itemFive">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonFive">When did you get married?</button>
+        </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">We were married in Manchester City Hall on July 20th, 2020.
+                  We were so excited to get married that we just couldn't wait for COVID-19 to pass!</div>
+            </div>
+    </div>
+
+    <div class="accordion-item" id="itemTwo">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonTwo">Will there be a ceremony?</button>
+    </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+             data-bs-parent="#accordionExample">
+          <div class="accordion-body">There will not be a formal ceremony in that sense. However, we will be
+          making a brief public declaration of our marriage near the beginning of the event.</div>
+        </div>
+  </div>
+
+    <div class="accordion-item" id="itemOne">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="false" aria-controls="collapseOne" id="accordionButtonOne">What is the dress code?</button>
+    </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+             data-bs-parent="#accordionExample">
+          <div class="accordion-body" id="accordionBody">Black tie optional. We encourage you to dress sharply for the evening,
+              but there is no expectation to wear a tuxedo or a gown.</div>
+        </div>
+    </div>
+
+    <div class="accordion-item" id="itemThree">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonThree">Why aren't you offering non-vegan menu options?</button>
+        </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">It is important to understand that veganism is not a diet. Veganism is an ethical position against the
+              mistreatment of animals, under which the action of slaughtering and eating them falls. We believe that one's actions should
+              mirror one's beliefs, and as such there will be no animal products served at our event.</div>
+            </div>
+    </div>
+
+    <div class="accordion-item" id="itemFour">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonFour">What made you want to move to the west coast?</button>
+        </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">The beautiful weather, of course!</div>
+            </div>
+    </div>
+
+    <div class="accordion-item" id="itemSix">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonSix">
+                What will you be doing for work when you get there?</button>
+        </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">Liza will be working as a pediatrician specializing in adolescent medicine
+              and mental health. Kyle will be pursuing a new career in programming, web design, and/or data science.</div>
+            </div>
+    </div>
+
+</div>
+
+
+
+</body>
 
 {% endblock content %}

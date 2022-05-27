@@ -67,7 +67,7 @@ MIDDLEWARE = [
 
 LOCKDOWN_ENABLED = True
 LOCKDOWN_FORM = 'rsvp.forms.PasswordForm'
-LOCKDOWN_PASSWORDS = '52023'
+LOCKDOWN_PASSWORDS = '052723'
 
 ROOT_URLCONF = 'wedding_website.urls'
 
