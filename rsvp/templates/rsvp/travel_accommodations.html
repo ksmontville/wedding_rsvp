@@ -5,14 +5,21 @@
 <head>
 
     <style>
+        #div1 {
+        margin: auto;
+        width: 50%;
+        }
+
 
         #openweathermap-widget-11 {
             margin: auto;
-            width: 40%;
+            width: 85%;
             padding: 20px;
         }
 
         #accomDiv {
+            margin: auto;
+            width: 70%;
             font-family: Georgia;
             font-size: 10;
             color: red;
@@ -32,26 +39,27 @@
 
         .flex-container {
             display: flex;
-            justify-content: space-evenly;
+            flex-basis: auto;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
 
         .flex-child {
-            flex: 1;
-            flex-shrink: 1;
+            flex: auto;
         }
 
-<!--        .flex-child:left {-->
+<!--        .flex-child:first-child {-->
 <!--            margin-right: 20px;-->
 <!--            margin-left: 20px;-->
 <!--        }-->
 
-<!--        .flex-child:center {-->
+<!--        .flex-child:second-child {-->
 <!--            margin-right: 20px;-->
 <!--            margin-left: 2000px;-->
 <!--        }-->
 
-<!--        .flex-child:right {-->
+<!--        .flex-child:third-child {-->
 <!--            margin-right: 20px;-->
 <!--            margin-left: 20px;-->
 <!--        }-->
