@@ -5,16 +5,21 @@
 <head>
 
     <style>
-        #weatherDiv {
+        #weatherDiv1 {
             margin: auto;
-            width: 86%;
+            width: 70%;
         }
 
+<!--        #weatherDiv2 {-->
+<!--            margin: auto;-->
+<!--            width: 70%;-->
+<!--        }-->
 
-        #openweathermap-widget-15 {
-            margin: auto;
-            width: 30%;
-        }
+
+<!--        #openweathermap-widget-11 {-->
+<!--            margin: auto;-->
+<!--            width: 50%;-->
+<!--        }-->
 
         #accomDiv {
             margin: auto;
@@ -45,17 +50,24 @@
         .flex-container-weather {
             display: flex;
             flex-basis: row wrap;
-            justify-content: space-evenly;
+            column-gap: 100px;
+            justify-content: center;
         }
 
-        .flex-child-top {
+        .flex-child-top-left {
+            flex-grow: 1;
+            flex-basis: 100%;
+        }
+
+        .flex-child-top-right {
             flex-shrink: 1;
+            flex-basis: 50%;
         }
 
         .flex-container-travel {
             display: flex;
             flex-basis: row wrap;
-            justify-content: space-evenly;
+            justify-content: flex-start;
         }
 
         .flex-child-left {
@@ -104,33 +116,28 @@
 
 <br>
 <div class="flex-container-weather">
-    <div class="flex-child-top">
-        <div class="shadow p-3 mb-3 bg-body rounded" id="weatherDiv">
+    <div class="flex-child-top-left">
+        <div class="shadow p-3 mb-3 bg-body rounded" id="weatherDiv1">
             <h4>In the event of rain, thunderstorms, or otherwise uncooperative weather,
                 the ceremony will be moved into the farmhouse along with the reception.
-                Here's hoping for good weather on the big day!</h4>
-            <br>
-<!--            <div id="openweathermap-widget-11"></div>-->
-<!--                <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>-->
-<!--                <script>-->
-<!--                window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];-->
-<!--                window.myWidgetParam.push({id: 11,cityid: '5243145',appid: 'a760770f242e43ec925681f6bec44068',-->
-<!--                units: 'imperial',containerid: 'openweathermap-widget-11',  });-->
-<!--                (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src-->
-<!--                = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s-->
-<!--                = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();-->
-<!--                </script>-->
-            <div id="openweathermap-widget-15"></div>
-                <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '5243145',appid: 'a760770f242e43ec925681f6bec44068',units: 'imperial',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
-            <br>
+                <p>
+                <p>Here's hoping for good weather on the big day!</h4>
+        </div>
+    </div>
+
+    <div class="flex-child-top-right">
+        <div class="shadow p-3 mb-3 bg-body rounded" id="weatherDiv2">
+            <div id="openweathermap-widget-11"></div>
+                <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script><script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 11,cityid: '5243145',appid: 'a760770f242e43ec925681f6bec44068',units: 'imperial',containerid: 'openweathermap-widget-11',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>
+
         </div>
     </div>
 </div>
-
+<br>
 <div class="flex-container-travel">
     <div class="flex-child-left">
         <div class="shadow p-3 mb-5 bg-body rounded" id="accomDiv">
-            <div class="text-center">
+            <div class="text-left">
                 <p>
                 <h4>To the left you will find a variety of local accommodations including AirBnB, hotels,
                     and campsites near the beautiful Silver Lake. Surrounding towns include Barnard, Woodstock, Pomfret,
@@ -143,40 +150,16 @@
                         <h4><p><b>The Barnard Inn Restaurant</b></p>
                             <p><b>5518 VT-12, Barnard, VT 05031</b></p>
                         </h4>
-                            <ol class="list-group list-group-numbered">
-                              <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                  <div class="fw-bold">From the north</div>
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsoLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                </div>
-                              </li>
-                              <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                  <div class="fw-bold">From the south</div>
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsoLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontentm
-                                </div>
-                              </li>
-                              <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                  <div class="fw-bold">From the east</div>
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsoLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                </div>
-                              </li>
-                              <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                  <div class="fw-bold">From the west</div>
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsoLotsofcontent
-                                  LotsofcontentLotsofcontentLotsofcontentLotsofcontent
-                                </div>
-                              </li>
-                            </ol>
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item"><b>From the North</b> ContentContentContentContentContentContentContentContentContent
+                              ContentContentContentContentContentContentContentContentContent</li>
+                              <li class="list-group-item"><b>From the South</b> ContentContentContentContentContentContentContentContentContent
+                              ContentContentContentContentContentContentContentContentContent </li>
+                              <li class="list-group-item"><b>From the East</b> ContentContentContentContentContentContentContentContentContent
+                              ContentContentContentContentContentContentContentContentContent</li>
+                              <li class="list-group-item"><b>From the West</b> ContentContentContentContentContentContentContentContentContent
+                              ContentContentContentContentContentContentContentContentContent</li>
+                            </ul>
                     </div>
             </div>
         </div>
