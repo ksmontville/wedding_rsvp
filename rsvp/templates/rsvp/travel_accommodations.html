@@ -5,23 +5,28 @@
 <head>
 
     <style>
-        #div1 {
-        margin: auto;
-        width: 75%;
-        }
+<!--        #weatherDiv {-->
+<!--            margin: auto;-->
+<!--            width: 100%;-->
+<!--        }-->
 
 
-        #openweathermap-widget-11 {
-            margin: auto;
-            width: 60%;
-            padding: 20px;
-        }
+<!--        #openweathermap-widget-11 {-->
+<!--            margin: auto;-->
+<!--            width: 75%;-->
+<!--        }-->
 
         #accomDiv {
             margin: auto;
-            width: 75%;
+            width: 76%;
             font-family: Georgia;
-            font-size: 10;
+        }
+
+        #travelDiv {
+<!--            margin: auto;-->
+<!--            width: 75%;-->
+            font-family: Georgia;
+            font-size: 30;
             color: red;
         }
 
@@ -37,21 +42,32 @@
             font-size: 24;
         }
 
-        .flex-container {
+        .flex-container-weather {
             display: flex;
-            flex-basis: auto;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .flex-child {
-            flex: auto;
-        }
-
-        .button-group-vertical {
+            flex-basis: row wrap;
+            justify-content: space-evenly;
             margin: auto;
-            width: 40%;
+            width: 80%;
+        }
+
+        .flex-child-top {
+            flex-shrink: 1;
+        }
+
+        .flex-container-travel {
+            display: flex;
+            flex-basis: row wrap;
+            justify-content: flex-start;
+        }
+
+        .flex-child-left {
+            flex-shrink: 1;
+            flex-basis: 80%;
+        }
+
+        .flex-child-right {
+            flex-shrink: 1;
+            flex-basis: 20%;
         }
 
         .btn-outline-primary {
@@ -70,83 +86,112 @@
 
 </head>
 
-<div class="shadow p-3 mb-3 bg-body rounded" id="div1">
-    <h4>In the event of rain, thunderstorms, or otherwise uncooperative weather,
-        the ceremony will be moved into the farmhouse along with the reception.
-        Here's hoping for good weather on the big day!</h4>
-
-    <div id="openweathermap-widget-11"></div>
-        <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
-        <script>
-        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-        window.myWidgetParam.push({id: 11,cityid: '5243145',appid: 'a760770f242e43ec925681f6bec44068',
-        units: 'imperial',containerid: 'openweathermap-widget-11',  });
-        (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src
-        = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s
-        = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
-        </script>
-    </div>
-
-    <div class="shadow p-3 mb-5 bg-body rounded" id="accomDiv">
-        <div class="text-center">
-            <h4>Below you will find a variety of local accommodations including AirBnB, hotels,
-                and campsites near the beautiful Silver Lake. Surrounding towns include Barnard, Woodstock, Pomfret,
-                Bethel, Royalton, Stockbridge, Gaysville, Lebanon, and Hanover.
-                Explore each link for more information.</h4>
-        </div>
-
-        <br>
-
-        <div class="flex-container">
-
-            <div class="flex-child left">
-                <div class="text-center">
-                    <h5><b>AirBnB</b></h5>
-                        <div class="btn-group-vertical" id="airbnbButtonGroup">
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/21788119?check_in=2022-11-15&check_out=2022-11-22&guests=1&adults=1&s=67&unique_share_id=bd62a132-edb3-4edb-9d0d-c705f8f2a98c" target="_blank" rel="noopener noreferrer">Heavenly Country House on Silver Lake</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/14975198?guests=1&adults=1&s=67&unique_share_id=8845157b-fe0c-44e3-8f7d-e3795b03b263" target="_blank" rel="noopener noreferrer">Barnard Brick House</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/47443719?guests=1&adults=1&s=67&unique_share_id=8416c32e-a924-40b3-9690-59d7a8745376" target="_blank" rel="noopener noreferrer">150 Acres of Serenity at Light Hill</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.vrbo.com/2069979?unitId=2634511&childrenCount=0&noDates=true&utm_source=direct&utm_medium=social&utm_campaign=earned:vrbo:sharecopylink:USA&utm_content=2069979&oc=OOJV8sAN5uVCfbiUN5h6K" target="_blank" rel="noopener noreferrer">3 bed/3.5 bath across from Barnard Inn</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/44559762?check_in=2023-05-31&check_out=2023-06-07&guests=1&adults=1&s=67&unique_share_id=db520205-61e2-4ded-b5a2-c25b4f9499be" target="_blank" rel="noopener noreferrer">Stunning Lakehouse in Royalton</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/37886194?guests=1&adults=1&s=67&unique_share_id=72b437e1-3af1-43f3-8df6-e83a1ea895e8" target="_blank" rel="noopener noreferrer">Space & Time - The Retreat You Deserve!</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/16012523?check_in=2023-01-21&check_out=2023-01-28&guests=1&adults=1&s=67&unique_share_id=2c61da7e-80c3-4385-bb15-6ba4ccce3c2b" target="_blank" rel="noopener noreferrer">11 Lili Lane - 2 bed/3 bath with tennis court, fire pit, near the lake, perfect for families!</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/17935737?guests=1&adults=1&s=67&unique_share_id=d6763b48-d102-4bcf-93a0-c57c4e7dcd55" target="_blank" rel="noopener noreferrer">On Silver Lake - 2 BR Lakehouse Apartment</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/25947338?guests=1&adults=1&s=67&unique_share_id=dba1cf99-47e4-4465-bc4f-cee14766f64f" target="_blank" rel="noopener noreferrer">North Road Lodge</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.woodstockvt.com/businesses/starry-hill-vacation-rental" target="_blank" rel="noopener noreferrer">Starry Hill Cabin</a>
-                        </div>
-                </div>
-            </div>
-
-            <div class="flex-child center">
-                <div class="text-center">
-                    <h5><b>Hotels</b></h5>
-                        <div class="btn-group-vertical" id="hotelsButtonGroup">
-                            <a class="btn btn-outline-primary mb-1" href="https://www.sleepwoodstock.com" target="_blank" rel="noopener noreferrer">Sleep Woodstock</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.woodstockinn.com" target="_blank" rel="noopener noreferrer">Woodstock Inn</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.thefanhouse.com" target="_blank" rel="noopener noreferrer">Fan House</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.thewoodstockerbnb.com" target="_blank" rel="noopener noreferrer">The Woodstocker</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.ardmoreinn.com" target="_blank" rel="noopener noreferrer">Ardmore Inn</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.jacksonhouse.com" target="_blank" rel="noopener noreferrer">Jackson House Inn</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.shirewoodstock.com" target="_blank" rel="noopener noreferrer">The Shire Motel</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.ontheriverwoodstock.com" target="_blank" rel="noopener noreferrer">506 on the River Inn</a>
-                            <a class="btn btn-outline-primary mb-1" href="https://www.qualityinnquecheegorge.com/" target="_blank" rel="noopener noreferrer">The Quality Inn at Quechee Gorge</a>
-                        </div>
-                </div>
-            </div>
-
-            <div class="flex-child right">
-                <div class="text-center">
-                    <h5><b>Campsites</b></h5>
-                        <div class="btn-group-vertical" id="campsitesButtonGroup">
-                            <a class="btn btn-outline-primary mb-1" href="https://www.vtstateparks.com" target="_blank" rel="noopener noreferrer">Silver Lake State Park</a>
-                        </div>
-                </div>
-            </div>
+<br>
+<div class="flex-container-weather">
+    <div class="flex-child-top">
+        <div class="shadow p-3 mb-3 bg-body rounded" id="weatherDiv">
+            <h4>In the event of rain, thunderstorms, or otherwise uncooperative weather,
+                the ceremony will be moved into the farmhouse along with the reception.
+                Here's hoping for good weather on the big day!</h4>
+            <br>
+            <div id="openweathermap-widget-11"></div>
+                <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+                <script>
+                window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+                window.myWidgetParam.push({id: 11,cityid: '5243145',appid: 'a760770f242e43ec925681f6bec44068',
+                units: 'imperial',containerid: 'openweathermap-widget-11',  });
+                (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src
+                = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s
+                = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+                </script>
+            <br>
         </div>
     </div>
-
-<div class="shadow p-3 mb-5 bg-body rounded" id="travelDiv">
-    Travel directions here
 </div>
+
+<div class="flex-container-travel">
+    <div class="flex-child-left"><
+        <div class="shadow p-3 mb-5 bg-body rounded" id="accomDiv">
+            <div class="text-center">
+                <p>
+                <h4>To the left you will find a variety of local accommodations including AirBnB, hotels,
+                    and campsites near the beautiful Silver Lake. Surrounding towns include Barnard, Woodstock, Pomfret,
+                    Bethel, Royalton, Stockbridge, Gaysville, Lebanon, and Hanover.
+                    Explore each link for more information.</h4>
+                <p>
+                <h4>Below you will find travel directions to the venue.</h4>
+                <br>
+                    <div class="shadow p-3 mb-5 bg-body rounded" id="travelDiv">
+                        <h4><p><b>The Barnard Inn Restaurant</b></p>
+                            <p><b>5518 VT-12, Barnard, VT 05031</b></p>
+                        </h4>
+                            <ol class="list-group list-group-numbered">
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">From the north</div>
+                                  Content for list item
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">From the south</div>
+                                  Content for list item
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">From the east</div>
+                                  Content for list item
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">From the west</div>
+                                  Content for list item
+                                </div>
+                              </li>
+                            </ol>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-child-right">
+        <div class="shadow p-3 mb-5 bg-body rounded" id="listDiv">
+            <div class="text-center">
+                <h5><b>AirBnB</b></h5>
+                    <div class="btn-group-vertical" id="airbnbButtonGroup">
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/21788119?check_in=2022-11-15&check_out=2022-11-22&guests=1&adults=1&s=67&unique_share_id=bd62a132-edb3-4edb-9d0d-c705f8f2a98c" target="_blank" rel="noopener noreferrer">Heavenly Country House on Silver Lake</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/14975198?guests=1&adults=1&s=67&unique_share_id=8845157b-fe0c-44e3-8f7d-e3795b03b263" target="_blank" rel="noopener noreferrer">Barnard Brick House</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/47443719?guests=1&adults=1&s=67&unique_share_id=8416c32e-a924-40b3-9690-59d7a8745376" target="_blank" rel="noopener noreferrer">150 Acres of Serenity at Light Hill</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.vrbo.com/2069979?unitId=2634511&childrenCount=0&noDates=true&utm_source=direct&utm_medium=social&utm_campaign=earned:vrbo:sharecopylink:USA&utm_content=2069979&oc=OOJV8sAN5uVCfbiUN5h6K" target="_blank" rel="noopener noreferrer">3 bed/3.5 bath across from Barnard Inn</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/44559762?check_in=2023-05-31&check_out=2023-06-07&guests=1&adults=1&s=67&unique_share_id=db520205-61e2-4ded-b5a2-c25b4f9499be" target="_blank" rel="noopener noreferrer">Stunning Lakehouse in Royalton</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/37886194?guests=1&adults=1&s=67&unique_share_id=72b437e1-3af1-43f3-8df6-e83a1ea895e8" target="_blank" rel="noopener noreferrer">Space & Time - The Retreat You Deserve!</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/16012523?check_in=2023-01-21&check_out=2023-01-28&guests=1&adults=1&s=67&unique_share_id=2c61da7e-80c3-4385-bb15-6ba4ccce3c2b" target="_blank" rel="noopener noreferrer">11 Lili Lane - 2 bed/3 bath with tennis court, fire pit, near the lake, perfect for families!</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/17935737?guests=1&adults=1&s=67&unique_share_id=d6763b48-d102-4bcf-93a0-c57c4e7dcd55" target="_blank" rel="noopener noreferrer">On Silver Lake - 2 BR Lakehouse Apartment</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/25947338?guests=1&adults=1&s=67&unique_share_id=dba1cf99-47e4-4465-bc4f-cee14766f64f" target="_blank" rel="noopener noreferrer">North Road Lodge</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.woodstockvt.com/businesses/starry-hill-vacation-rental" target="_blank" rel="noopener noreferrer">Starry Hill Cabin</a>
+                    </div>
+                <h5><b>Hotels</b></h5>
+                    <div class="btn-group-vertical" id="hotelsButtonGroup">
+                        <a class="btn btn-outline-primary mb-1" href="https://www.sleepwoodstock.com" target="_blank" rel="noopener noreferrer">Sleep Woodstock</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.woodstockinn.com" target="_blank" rel="noopener noreferrer">Woodstock Inn</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.thefanhouse.com" target="_blank" rel="noopener noreferrer">Fan House</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.thewoodstockerbnb.com" target="_blank" rel="noopener noreferrer">The Woodstocker</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.ardmoreinn.com" target="_blank" rel="noopener noreferrer">Ardmore Inn</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.jacksonhouse.com" target="_blank" rel="noopener noreferrer">Jackson House Inn</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.shirewoodstock.com" target="_blank" rel="noopener noreferrer">The Shire Motel</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.ontheriverwoodstock.com" target="_blank" rel="noopener noreferrer">506 on the River Inn</a>
+                        <a class="btn btn-outline-primary mb-1" href="https://www.qualityinnquecheegorge.com/" target="_blank" rel="noopener noreferrer">The Quality Inn at Quechee Gorge</a>
+                    </div>
+                <h5><b>Campsites</b></h5>
+                    <div class="btn-group-vertical" id="campsitesButtonGroup">
+                        <a class="btn btn-outline-primary mb-1" href="https://www.vtstateparks.com" target="_blank" rel="noopener noreferrer">Silver Lake State Park</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}
