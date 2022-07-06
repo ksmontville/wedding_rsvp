@@ -62,7 +62,8 @@
         .flex-container-travel {
             display: flex;
             gap: 10px;
-            flex-basis: row wrap;
+            flex-direction: row;
+            flex-wrap: wrap;
             width: 100%;
             justify-content: flex-start;
         }
@@ -75,31 +76,31 @@
             flex-basis: 100%;
         }
 
-<!--        @media (min-width: 600px) {-->
-<!--            .flex-container-weather {-->
-<!--                flex-wrap: nowrap;-->
-<!--            }-->
+        @media (min-width: 768px) {
+            .flex-container-weather {
+                flex-wrap: nowrap;
+            }
 
-<!--            .flex-container-travel {-->
-<!--                flex-wrap: nowrap;-->
-<!--            }-->
+            .flex-container-travel {
+                flex-wrap: nowrap;
+            }
 
-<!--            .flex-child-left {-->
-<!--                flex-basis: 33%;-->
-<!--            }-->
+            .flex-child-left {
+                flex-basis: 50%;
+            }
 
-<!--            .flex-child-right {-->
-<!--                flex-basis: 33%;-->
-<!--            }-->
+            .flex-child-right {
+                flex-basis: 50%;
+            }
 
-<!--            .flex-child-top-left {-->
-<!--                flex-basis: 33%;-->
-<!--            }-->
+            .flex-child-top-left {
+                flex-basis: 50%;
+            }
 
-<!--            .flex-child-top-right {-->
-<!--                flex-basis: 33%;-->
-<!--            }-->
-<!--        }-->
+            .flex-child-top-right {
+                flex-basis: 50%;
+            }
+        }
 
         .btn-outline-primary {
               --bs-btn-font-family: Georgia;
