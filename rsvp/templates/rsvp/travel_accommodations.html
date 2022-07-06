@@ -49,36 +49,36 @@
 
         .flex-container-weather {
             display: flex;
+            flex-wrap: wrap;
             flex-basis: row wrap;
-            column-gap: 100px;
             justify-content: center;
         }
 
         .flex-child-top-left {
-            flex-grow: 1;
+
             flex-basis: 100%;
         }
 
         .flex-child-top-right {
-            flex-shrink: 1;
-            flex-basis: 50%;
+
+            flex-basis: 100%;
         }
 
         .flex-container-travel {
             display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
             flex-basis: row wrap;
             width: 100%;
-            justify-content: center;
+            justify-content: space-evenly;
         }
 
         .flex-child-left {
-            flex-grow: 1;
             flex-basis: 100%;
         }
 
         .flex-child-right {
-            flex-shrink: 1;
-            flex-basis: 75%;
+            flex-basis: 100%;
         }
 
         @media (min-width: 600px) {
