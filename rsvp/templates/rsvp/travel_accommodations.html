@@ -5,31 +5,34 @@
 <head>
 
     <style>
-        #weatherDiv1 {
-            margin: auto;
-            width: 100%;
-        }
+<!--        #weatherDiv1 {-->
+<!--            margin: auto;-->
+<!--            width: 100%;-->
+<!--        }-->
 
-        #weatherDiv2 {
-            margin: auto;
-            width: 100%;
-        }
+<!--        #weatherDiv2 {-->
+<!--            margin: auto;-->
+<!--            width: 100%;-->
+<!--        }-->
 
 
-        #openweathermap-widget-15 {
-            margin: auto;
-            width: 75%;
-        }
+<!--        #openweathermap-widget-15 {-->
+<!--            margin: auto;-->
+<!--            width: 75%;-->
+<!--        }-->
 
-        #accomDiv {
-            font-family: Georgia;
-            font-size: 3vw;
-        }
+<!--        #accomDiv {-->
+<!--            font-family: Georgia;-->
+<!--            font-size: 3vw;-->
+<!--        }-->
 
         #travelDiv {
             font-family: Georgia;
             font-size: 3vw;
-            color: red;
+        }
+
+        #listDiv {
+
         }
 
         h4 {
@@ -44,39 +47,48 @@
             font-size: 5vw;
         }
 
-        .flex-container-weather {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: center;
+<!--        .flex-container-weather {-->
+<!--            display: flex;-->
+<!--            flex-direction: row;-->
+<!--            flex-wrap: wrap;-->
+<!--            width: 100%;-->
+<!--            justify-content: center;-->
+<!--        }-->
+
+        .flex-child-top-left {
+            flex: initial;
         }
 
-<!--        .flex-child-top-left {-->
-
-<!--            flex-basis: 100%;-->
-<!--        }-->
-
-<!--        .flex-child-top-right {-->
-
-<!--            flex-basis: 100%;-->
-<!--        }-->
+        .flex-child-top-right {
+            flex: initial;
+        }
 
         .flex-container-travel {
             display: flex;
-            gap: 10px;
             flex-direction: row;
             flex-wrap: wrap;
-            width: 100%;
             justify-content: center;
         }
 
         .flex-child-left {
-            flex: 1;
+            flex: initial;
         }
 
         .flex-child-right {
-            flex: 1;
+            flex: initial;
+        }
+
+        .btn-outline-primary {
+              --bs-btn-font-family: Georgia;
+              --bs-btn-font-size: 0.75vw;
+              --bs-btn-font-weight: 600;
+              --bs-btn-color: #E9D5CA;
+              --bs-btn-bg: #363062;
+              --bs-btn-border-color: var(--bd-violet);
+              --bs-btn-border-radius: .5rem;
+              --bs-btn-hover-color: white;
+              --bs-btn-hover-bg: #827397;
+              --bs-btn-margin-top: 100px;
         }
 
         @media (min-width: 600px) {
@@ -118,18 +130,6 @@
             }
         }
 
-        .btn-outline-primary {
-              --bs-btn-font-family: Georgia;
-              --bs-btn-font-size: 0.75vw;
-              --bs-btn-font-weight: 600;
-              --bs-btn-color: #E9D5CA;
-              --bs-btn-bg: #363062;
-              --bs-btn-border-color: var(--bd-violet);
-              --bs-btn-border-radius: .5rem;
-              --bs-btn-hover-color: white;
-              --bs-btn-hover-bg: #827397;
-              --bs-btn-margin-top: 100px;
-        }
 
     </style>
 
@@ -166,10 +166,10 @@
                     Barnard, Woodstock, Pomfret, Bethel, Royalton, Stockbridge, Gaysville, Lebanon, and Hanover.</h4>
 
                     <p><h4>Explore each link for more information.</h4>
+
                     <div class="shadow p-3 mb-5 bg-body rounded" id="travelDiv">
                         <h4><p><b>The Barnard Inn Restaurant</b></p>
-                            <p><b>5518 VT-12, Barnard, VT 05031</b></p>
-                        </h4>
+                            <p><b>5518 VT-12, Barnard, VT 05031</b></p></h4>
                             <ul class="list-group list-group-flush">
                               <li class="list-group-item"><b>From the North</b> ContentContentContentContentContentContentContentContentContent
                               ContentContentContentContentContentContentContentContentContent</li>
@@ -188,7 +188,7 @@
     <div class="flex-child-right">
         <div class="shadow p-3 mb-5 bg-body rounded" id="listDiv">
             <div class="text-center">
-                <h5><b>AirBnB</b></h5>
+                    <h5><b>AirBnB</b></h5>
                     <div class="btn-group-vertical" id="airbnbButtonGroup">
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/21788119?check_in=2022-11-15&check_out=2022-11-22&guests=1&adults=1&s=67&unique_share_id=bd62a132-edb3-4edb-9d0d-c705f8f2a98c" target="_blank" rel="noopener noreferrer">Heavenly Country House on Silver Lake</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/14975198?guests=1&adults=1&s=67&unique_share_id=8845157b-fe0c-44e3-8f7d-e3795b03b263" target="_blank" rel="noopener noreferrer">Barnard Brick House</a>
@@ -201,7 +201,7 @@
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/25947338?guests=1&adults=1&s=67&unique_share_id=dba1cf99-47e4-4465-bc4f-cee14766f64f" target="_blank" rel="noopener noreferrer">North Road Lodge</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.woodstockvt.com/businesses/starry-hill-vacation-rental" target="_blank" rel="noopener noreferrer">Starry Hill Cabin</a>
                     </div>
-                <h5><b>Hotels</b></h5>
+                    <h5><b>Hotels</b></h5>
                     <div class="btn-group-vertical" id="hotelsButtonGroup">
                         <a class="btn btn-outline-primary mb-1" href="https://www.sleepwoodstock.com" target="_blank" rel="noopener noreferrer">Sleep Woodstock</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.woodstockinn.com" target="_blank" rel="noopener noreferrer">Woodstock Inn</a>
@@ -213,7 +213,7 @@
                         <a class="btn btn-outline-primary mb-1" href="https://www.ontheriverwoodstock.com" target="_blank" rel="noopener noreferrer">506 on the River Inn</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.qualityinnquecheegorge.com/" target="_blank" rel="noopener noreferrer">The Quality Inn at Quechee Gorge</a>
                     </div>
-                <h5><b>Campsites</b></h5>
+                    <h5><b>Campsites</b></h5>
                     <div class="btn-group-vertical" id="campsitesButtonGroup">
                         <a class="btn btn-outline-primary mb-1" href="https://www.vtstateparks.com" target="_blank" rel="noopener noreferrer">Silver Lake State Park</a>
                     </div>
