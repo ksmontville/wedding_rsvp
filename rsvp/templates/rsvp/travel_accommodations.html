@@ -48,7 +48,8 @@
 
         h5 {
             color: #827397;
-            font-size: 5vw;
+            font-size: 4vw;
+            text-align: center;
         }
 
         .flex-container-weather {
@@ -75,11 +76,21 @@
         }
 
         .flex-child-left {
-            flex: initial;
+            flex: auto;
         }
 
         .flex-child-right {
             flex: initial;
+        }
+
+        .flex-child-right-inner {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            justify-content: center;
+            gap: 20px;
         }
 
         .btn-outline-primary {
@@ -188,8 +199,9 @@
     <div class="flex-child-right">
         <div class="shadow p-3 mb-5 bg-body rounded" id="listDiv">
             <div class="text-center">
-                    <h5><b>AirBnB</b></h5>
+                <div class="flex-child-right-inner">
                     <div class="btn-group-vertical" id="airbnbButtonGroup">
+                   <h5 style="padding: 0px 60px;"><b>AirBnB</b></h5>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/21788119?check_in=2022-11-15&check_out=2022-11-22&guests=1&adults=1&s=67&unique_share_id=bd62a132-edb3-4edb-9d0d-c705f8f2a98c" target="_blank" rel="noopener noreferrer">Heavenly Country House on Silver Lake</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/14975198?guests=1&adults=1&s=67&unique_share_id=8845157b-fe0c-44e3-8f7d-e3795b03b263" target="_blank" rel="noopener noreferrer">Barnard Brick House</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/47443719?guests=1&adults=1&s=67&unique_share_id=8416c32e-a924-40b3-9690-59d7a8745376" target="_blank" rel="noopener noreferrer">150 Acres of Serenity at Light Hill</a>
@@ -201,8 +213,9 @@
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/25947338?guests=1&adults=1&s=67&unique_share_id=dba1cf99-47e4-4465-bc4f-cee14766f64f" target="_blank" rel="noopener noreferrer">North Road Lodge</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.woodstockvt.com/businesses/starry-hill-vacation-rental" target="_blank" rel="noopener noreferrer">Starry Hill Cabin</a>
                     </div>
-                    <h5><b>Hotels</b></h5>
+
                     <div class="btn-group-vertical" id="hotelsButtonGroup">
+                    <h5 style="padding: 0px 5px;"><b>Hotels</b></h5>
                         <a class="btn btn-outline-primary mb-1" href="https://www.sleepwoodstock.com" target="_blank" rel="noopener noreferrer">Sleep Woodstock</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.woodstockinn.com" target="_blank" rel="noopener noreferrer">Woodstock Inn</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.thefanhouse.com" target="_blank" rel="noopener noreferrer">Fan House</a>
@@ -213,10 +226,12 @@
                         <a class="btn btn-outline-primary mb-1" href="https://www.ontheriverwoodstock.com" target="_blank" rel="noopener noreferrer">506 on the River Inn</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.qualityinnquecheegorge.com/" target="_blank" rel="noopener noreferrer">The Quality Inn at Quechee Gorge</a>
                     </div>
-                    <h5><b>Campsites</b></h5>
+
                     <div class="btn-group-vertical" id="campsitesButtonGroup">
+                    <h5><b>Campsites</b></h5>
                         <a class="btn btn-outline-primary mb-1" href="https://www.vtstateparks.com" target="_blank" rel="noopener noreferrer">Silver Lake State Park</a>
                     </div>
+                </div>
             </div>
         </div>
     </div>
