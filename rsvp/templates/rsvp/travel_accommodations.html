@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<head>
+<head xmlns="http://www.w3.org/1999/html">
 
     <style>
         #weatherDiv1 {
@@ -181,15 +181,15 @@
     <div class="flex-child-left">
         <div class="shadow p-3 mb-5 bg-body rounded" id="accomDiv">
                 <h4>Below you will find travel directions to the venue, and links to a variety of local accommodations
-                    including AirBnB, hotels, and campsites nea the beautiful Silver Lake. Surrounding towns include
-                    Barnard, Woodstock, Pomfret, Bethel, Royalton, Stockbridge, Gaysville, Lebanon, and Hanover.</h4>
+                    including AirBnB, hotels, and campsites nea the beautiful Silver Lake.</h4>
 
-                    <p><h4>Explore each link for more information.</h4>
-
+                <p><h4>Surrounding towns include Barnard, Woodstock, Pomfret, Bethel, Royalton, Stockbridge, Gaysville, Lebanon, and Hanover.</h4>
+                <p><h4>Explore each link for booking information.</h4>
+                <br>
                 <div class="text-left">
                     <div class="shadow p-3 mb-5 bg-body rounded" id="travelDiv">
-                        <h4><p><b>The Barnard Inn Restaurant</b></p>
-                            <p><b>5518 VT-12, Barnard, VT 05031</b></p></h4>
+                        <h4><p><b><a href="https://barnardinn.com/" style="color: #4D4C70" target="_blank" rel="noopener noreferrer">The Barnard Inn Restaurant</a></b></p>
+                            <p><i>5518 VT-12, Barnard, VT 05031</i></p></h4>
                             <ul class="list-group list-group-flush">
                               <li class="list-group-item"><b>From the North</b> ContentContentContentContentContentContent</li>
                               <li class="list-group-item"><b>From the South</b> ContentContentContentContentContentContent</li>
@@ -206,7 +206,7 @@
             <div class="text-center">
                 <div class="flex-child-right-inner">
                     <div class="btn-group-vertical" id="airbnbButtonGroup">
-                   <h5 style="padding: 0px 60px;"><b>AirBnB</b></h5>
+                        <h5 style="padding: 0px 60px;"><b>AirBnB</b></h5>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/21788119?check_in=2022-11-15&check_out=2022-11-22&guests=1&adults=1&s=67&unique_share_id=bd62a132-edb3-4edb-9d0d-c705f8f2a98c" target="_blank" rel="noopener noreferrer">Heavenly Country House on Silver Lake</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/14975198?guests=1&adults=1&s=67&unique_share_id=8845157b-fe0c-44e3-8f7d-e3795b03b263" target="_blank" rel="noopener noreferrer">Barnard Brick House</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.airbnb.com/rooms/47443719?guests=1&adults=1&s=67&unique_share_id=8416c32e-a924-40b3-9690-59d7a8745376" target="_blank" rel="noopener noreferrer">150 Acres of Serenity at Light Hill</a>
@@ -220,7 +220,7 @@
                     </div>
 
                     <div class="btn-group-vertical" id="hotelsButtonGroup">
-                    <h5 style="padding: 0px 8px;"><b>Hotels</b></h5>
+                         <h5 style="padding: 0px 8px;"><b>Hotels</b></h5>
                         <a class="btn btn-outline-primary mb-1" href="https://www.sleepwoodstock.com" target="_blank" rel="noopener noreferrer">Sleep Woodstock</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.woodstockinn.com" target="_blank" rel="noopener noreferrer">Woodstock Inn</a>
                         <a class="btn btn-outline-primary mb-1" href="https://www.thefanhouse.com" target="_blank" rel="noopener noreferrer">Fan House</a>
@@ -233,7 +233,7 @@
                     </div>
 
                     <div class="btn-group-vertical" id="campsitesButtonGroup">
-                    <h5><b>Campsites</b></h5>
+                        <h5><b>Campsites</b></h5>
                         <a class="btn btn-outline-primary mb-1" href="https://www.vtstateparks.com" target="_blank" rel="noopener noreferrer">Silver Lake State Park</a>
                     </div>
                 </div>
