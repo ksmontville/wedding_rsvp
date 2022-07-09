@@ -31,7 +31,7 @@
             font-size: 15;
         }
 
-        button {
+        #submitButton {
                 color: #E9D5CA;
                 background-color: #827397;
                 border: none;
@@ -48,13 +48,15 @@
 
 <div id="overall">
     <div class="shadow p-3 mb-3 bg-body rounded" id="titleDiv">
-    <h2><b>Liza Ignatova & Kyle Montville Wedding Celebration & Going Away Party</b></h2>
+    <h2><b>Liza Ignatova & Kyle Montville Wedding Celebration</b></h2>
     <h3>
         <dl>
         <dt>Saturday, May 27th, 2023</dt>
+        <dt><p></p><a href="https://barnardinn.com/" style="color: #4D4C70" target="_blank" rel="noopener noreferrer">@The Barnard Inn</a></dt>
         </dl>
     </h3>
-    <p>We would love for you to join us!</p>
+    <p><h4>We would love for you to join us!</h4></p>
+    <p>Explore the website for more information about the venue, menu, schedule of events, travel accommodations, and more!</p>
     <p><i>Please complete the form below as confirmation for each person who will be attending the event.</i></p>
     </div>
 <!--    <div id="photo_us">-->
@@ -68,7 +70,7 @@
         <form action="{% url 'rsvp:index' %}" method="post" class="form" id="rsvpForm">
             {% csrf_token %}
             {{ form|crispy }}
-            <button name="submit">Submit</button>
+            <button  id="submitButton" name="submit">Submit</button>
         </form>
     </div>
 </div>

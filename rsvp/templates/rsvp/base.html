@@ -42,13 +42,12 @@
   <nav class="navbar navbar-expand-lg" style="background-color: #363062;">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'rsvp:index' %}" aria-current="page">LI & KM</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+    <button class="navbar-toggler" style="background-color: white; color: #E9D5CA;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-<!--        <a class="nav-link" href="{% url 'rsvp:index' %}">RSVP</a>-->
         <a class="nav-link" href="{% url 'rsvp:menu' %}">Menu</a>
         <a class="nav-link" href="{% url 'rsvp:events' %}">Events</a>
         <a class="nav-link" href="{% url 'rsvp:travel' %}">Travel</a>
