@@ -11,6 +11,17 @@
             color: #827397;
         }
 
+        #nameDiv {
+            color: #E9D5CA;
+            background-color: #363062;
+            border: solid #827397 5px;
+        }
+
+        .rounded {
+            max-width: 100%;
+            height: auto;
+        }
+
 <!--        #photo_us {-->
 <!--            position: absolute;-->
 <!--            left: 12%;-->
@@ -26,10 +37,6 @@
 <!--            border: 4px solid #DEB6AB;-->
 <!--            border-radius: 10px;-->
 <!--        }-->
-
-        p {
-            font-size: 15;
-        }
 
         #submitButton {
                 color: #E9D5CA;
@@ -48,16 +55,16 @@
 
 <div id="overall">
     <div class="shadow p-3 mb-3 bg-body rounded" id="titleDiv">
-    <h2><b>Liza Ignatova & Kyle Montville Wedding Celebration</b></h2>
-    <h3>
-        <dl>
+       <div class="shadow p-2 mb-2 rounded" id="nameDiv"><h2><b>Liza Ignatova<br>- & -<br>Kyle Montville</b></h2></div>
+      <h3>
+      <dl>
+        <dt>Wedding Celebration</dt>
         <dt>Saturday, May 27th, 2023</dt>
         <dt><p></p><a href="https://barnardinn.com/" style="color: #4D4C70" target="_blank" rel="noopener noreferrer">@The Barnard Inn</a></dt>
         </dl>
-    </h3>
+        </h3>
     <p><h4>We would love for you to join us!</h4></p>
-    <p>Explore the website for more information about the venue, menu, schedule of events, travel accommodations, and more!</p>
-    <p><i>Please complete the form below as confirmation for each person who will be attending the event.</i></p>
+    <p><img src="https://i.ibb.co/K73cFZP/babe-n-me.jpg" class="rounded"></p>
     </div>
 <!--    <div id="photo_us">-->
 <!--        <img src="https://i.ibb.co/K73cFZP/babe-n-me.jpg" width="379" height="384" class="rounded">-->
@@ -67,6 +74,9 @@
 <!--        <img src="https://i.ibb.co/tXbxMLj/babe-n-cats.jpg" width="512" height="384" class="rounded">-->
 <!--    </div>-->
     <div class="shadow p-3 mb-5 bg-body rounded" id="formDiv">
+        <p>Explore the website for more information about the venue, menu, schedule of events, travel accommodations, and more!</p>
+         <p><i>Please complete the form below as confirmation for each person who will be attending the event.</i></p>
+
         <form action="{% url 'rsvp:index' %}" method="post" class="form" id="rsvpForm">
             {% csrf_token %}
             {{ form|crispy }}
