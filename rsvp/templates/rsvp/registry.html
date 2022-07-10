@@ -1,7 +1,60 @@
 {% extends 'rsvp/base.html' %}
-
 {% block content %}
 
-CHARITABLE DONATIONS
+<head>
+    <style>
+
+        #donateDiv {
+            background-color: #4D4C7D;
+            color: E9D5CA;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 5vw;
+        }
+
+
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            justify-content: center;
+        }
+
+        .flex-child-top {
+            flex: auto;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 4vw;
+            color: #4D4C70;
+        }
+
+        .flex-child-bot {
+            flex: auto;
+        }
+
+    </style>
+</head>
+
+<div class="flex-container">
+    <div class="flex-child-top">
+        <div class="shadow p-3 mb-5 bg-body rounded">
+            <div id="donateDiv">Help Us Relocate!</div>
+            <br>
+            <p>In lieu of a traditional registry, the couple will only be accepting donations to the moving fund,
+            which will help them in their transition to their new lives on the West Coast!</p>
+
+        </div>
+    </div>
+
+    <div class="flex-child-bot">
+        <div class="shadow p-3 mb-5 bg-body rounded">
+            <div class="gfm-embed" data-url="https://www.gofundme.com/f/um46f-the-moving-fund/widget/large/"></div>
+            <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}
