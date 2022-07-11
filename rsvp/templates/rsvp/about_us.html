@@ -12,6 +12,38 @@
             margin-top: 2%;
         }
 
+        .nav-pills .nav-link.active {
+            background-color: #4D4C7D;
+
+        }
+
+
+        .card {
+        border: solid #E9D5CA 2px;
+
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+
+        .flex-child-left {
+            order: 1;
+        }
+
+        .flex-child-right {
+            order: 2;
+            background-color: #E9D5CA;
+            flex-basis: 10%;
+            border-color: #E9D5CA;
+            border-width: 2px;
+            border-style: solid solid solid none;
+            border-radius: 5px;
+        }
+
     </style>
 
 </head>
@@ -19,6 +51,68 @@
 
 <div class="shadow p-3 mb-3 bg-body rounded" id="pageHeading">
   <div id="faqDiv"><h1><i>About Us</i></h1></div>
+</div>
+
+<div class="shadow p-3 mb-3 bg-body rounded" id="aboutUsShadow">
+
+    <div class="flex-container" id="aboutUsContainer">
+
+        <div class="flex-child-right" id="flexChildRight">
+
+        </div>
+
+        <div class="flex-child-left" id="flexChildLeft">
+
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="aboutUsTabs" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="aboutUsLizaTab" data-bs-toggle="pill" data-bs-target="#aboutUsLiza" type="button" role="tab" aria-controls="aboutUsLizaTab" aria-selected="true">Liza</button>
+                    <button class="nav-link" id="aboutUsKyleTab" data-bs-toggle="pill" data-bs-target="#aboutUsKyle" type="button" role="tab" aria-label="aboutUsKyleTab" aria-selected="false">Kyle</button>
+                    <button class="nav-link" id="aboutUsNellyTab" data-bs-toggle="pill" data-bs-target="#aboutUsNelly" type="button" role="tab" aria-label="aboutUsNellyTab" aria-selected="false">Nelly</button>
+                    <button class="nav-link" id="aboutUsMooseTab" data-bs-toggle="pill" data-bs-target="#aboutUsMoose" type="button" role="tab" aria-labelledby="aboutUsMooseTab" aria-selected="false">Moose</button>
+                </div>
+
+                <div class="tab-content" id="aboutUsContent">
+                    <div class="tab-pane fade show active" id="aboutUsLiza" role="tabpanel" aria-labelledby="aboutUsLizaTab">
+                        <div class="card text-center" style="width: 18rem;">
+                            <img src="https://i.ibb.co/7t4vYxF/FB-IMG-1657560610070.jpg" class="d-block w-100 rounded" alt="babeWithCake">
+                            <div class="card-body">
+                                <p>Liza description here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="aboutUsKyle" role="tabpanel" aria-labelledby="aboutUsKyleTab">
+                        <div class="card text-center" style="width: 18rem">
+                            <img src="https://i.ibb.co/MfG7F7P/FB-IMG-1657560584805.jpg" class="d-block w-100 rounded" alt="kyleWithPlants">
+                            <div class="card-body">
+                                <p>Kyle description here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="aboutUsNelly" role="tabpanel" aria-labelledby="aboutUsNellyTab">
+                        <div class="card text-center" style="width: 18rem">
+                            <img src="https://i.ibb.co/2t5Bxp2/PXL-20220325-195201523-MP.jpg" class="d-block w-100 rounded" alt="nellyOnStand">
+                            <div class="card-body">
+                                <p>Nelly description here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="aboutUsMoose" role="tabpanel" aria-labelledby="aboutUsMooseTab">
+                        <div class="card text-center" style="width: 18rem">
+                            <img src="https://i.ibb.co/nCLwfmk/moose-in-bag.jpg" class="d-block w-100 rounded" alt="mooseInBag">
+                            <div class="card-body">
+                                <p>Moose description here.</p>
+                            </div>
+                        </div>
+                    <div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 
 {% endblock content %}
