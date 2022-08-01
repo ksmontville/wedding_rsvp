@@ -3,6 +3,8 @@
 {% block content %}
 
 <head>
+    <title>Montova Celebration</title>
+
     <style>
 
         #overall {
@@ -12,9 +14,25 @@
         }
 
         #nameDiv {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
             color: #4D4C7D;
             background-color: white;
-            border: 4px solid #E9D5CA;
+            margin: 0 24% 0 24%;
+            font-size: 2vw;
+        }
+
+        #heart-img {
+            min-width: 10vw;
+            max-width: 16vw;
+            height: auto;
+            padding: 24px;
+        }
+
+        dt {
+            font-size: 2vw;
         }
 
         .rounded {
@@ -22,31 +40,19 @@
             height: auto;
         }
 
-<!--        #photo_us {-->
-<!--            position: absolute;-->
-<!--            left: 12%;-->
-<!--            top: 35%;-->
-<!--            border: 4px solid #DEB6AB;-->
-<!--            border-radius: 10px;-->
-<!--        }-->
-
-<!--        #photo_cats {-->
-<!--            position: absolute;-->
-<!--            left: 62%;-->
-<!--            top: 34%;-->
-<!--            border: 4px solid #DEB6AB;-->
-<!--            border-radius: 10px;-->
-<!--        }-->
-
         #submitButton {
-                color: #E9D5CA;
-                background-color: #827397;
-                border: none;
-                border-color: #827397;
-                border-radius: 8px;
-                border-width: 2px;
-                margin-top: 20px;
-                margin-bottom: 10px;
+            color: #E9D5CA;
+            background-color: #827397;
+            border: none;
+            border-color: #827397;
+            border-radius: 8px;
+            border-width: 2px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #formDiv p {
+            font-size: 24px;
         }
 
 
@@ -54,28 +60,23 @@
 </head>
 
 <div id="overall">
-   <b><i>
-    <div class="shadow p-3 mb-3 bg-body rounded" id="titleDiv">
-       <div class="shadow p-2 mb-2 rounded" id="nameDiv"><h2><i>Liza Ignatova<br>- & -<br>Kyle Montville</i></h2></div>
-      <h3>
-      <dl>
-        <dt>Wedding Celebration</dt>
-        <dt>Saturday, May 27th, 2023</dt>
-        <dt><p></p><a href="https://barnardinn.com/" style="color: #4D4C70" target="_blank" rel="noopener noreferrer">@The Barnard Inn</a></dt>
-        </dl>
-        </h3>
-    <p><h4>We would love for you to join us!</h4></p>
-    <p><img src="https://i.ibb.co/K73cFZP/babe-n-me.jpg" class="rounded"></p>
-    </div></i></b>
-<!--    <div id="photo_us">-->
-<!--        <img src="https://i.ibb.co/K73cFZP/babe-n-me.jpg" width="379" height="384" class="rounded">-->
-<!--    </div>-->
 
-<!--    <div class="mt-3" id="photo_cats">-->
-<!--        <img src="https://i.ibb.co/tXbxMLj/babe-n-cats.jpg" width="512" height="384" class="rounded">-->
-<!--    </div>-->
-    <div class="shadow p-3 mb-5 bg-body rounded" id="formDiv">
-        <p>Explore the website for more information about the venue, menu, schedule of events, travel accommodations, and more!</p>
+    <div class="shadow p-3 mb-3 bg-body rounded" id="titleDiv">
+        <div class="shadow p-2 mb-2 rounded" id="nameDiv">
+            <dt><i>Liza Ignatova<br>- & -<br>Kyle Montville</i></dt>
+            <img id="heart-img" src="https://i.ibb.co/R2cFQvW/heart.jpg" alt="heart" border="0">
+            <br>
+            <i>Wedding Celebration
+            Saturday, May 27th, 2023
+            <br>
+            <a href="https://barnardinn.com/" style="color: #4D4C70" target="_blank" rel="noopener noreferrer">@The Barnard Inn</a></i>
+        </div>
+
+        <p><h4>We would love for you to join us!</h4>
+            <p><img src="https://i.ibb.co/K73cFZP/babe-n-me.jpg" class="rounded">
+    </div>
+
+    <div class="shadow p-3 bg-body rounded" id="formDiv">
          <p><i>Please complete the form below as confirmation for each person who will be attending the event.</i></p>
 
         <form action="{% url 'rsvp:index' %}" method="post" class="form" id="rsvpForm">

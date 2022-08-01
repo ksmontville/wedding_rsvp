@@ -3,17 +3,32 @@
 {% block content %}
 
 <head>
+    <title>Menu</title>
+
     <style>
         .nav-item>button {
             color: #363062 !important;
         }
 
         #mainCourseDiv{
+            display: flex;
+            justify-content: center;
             background-color: #4D4C7D;
             color: E9D5CA;
             text-align: center;
             font-family: Georgia;
-            font-size: 5vw;
+            font-size: 2vw;
+        }
+
+        .text-center {
+            min-width: 100%;
+            height: auto;
+        }
+
+        .card-body p {
+            font-family: Georgia;
+            color: #363062;
+            font-size: 1.2vw;
         }
 
         #appsDiv{
@@ -21,7 +36,7 @@
             color: E9D5CA;
             text-align: center;
             font-family: Georgia;
-            font-size: 5vw;
+            font-size: 2vw;
         }
 
         #pageHeading {
@@ -29,8 +44,7 @@
             text-align: center;
             font-family: Georgia;
             font-size: 5vw;
-            border: solid #E9D5CA 4px;
-            margin-top: 2%;
+            margin: 2% 24% 0 24%;
         }
 
         #attnDiv{
@@ -38,7 +52,7 @@
             color: #E9D5CA;
             text-align: center;
             font-family: Georgia;
-            font-size: 5vw;
+            font-size: 2vw;
         }
 
     </style>
@@ -51,30 +65,34 @@
 </div>
 
 <div class="shadow p-3 mb-5 bg-body rounded" id="headerDiv">
-    <div id="attnDiv">Attention</div>
+    <div id="attnDiv">Attention!</div>
     <br>
-    <h6 style="color:#363063;">
-        <p>All menu items, including drinks, dinner, and dessert will be vegan.</p>
-        <p>The couple kindly ask that guests do not bring any non-vegan food to the event.</p>
-        <p>Ingredients were sourced from local Vermont farms, and menu items were hand-selected for this event based on seasonal availability.</p>
-        <p>Thank you, hope to see you there!</p>
-    </h6>
+    <p style="font-size: 1.4vw; color:#363063; padding: 1vw 2vw;">
+        All menu items, including drinks, dinner, and dessert will be vegan.<br><br>
+        The couple kindly ask that guests do not bring any non-vegan food to the event.<br><br>
+        Ingredients were sourced from local Vermont farms, and menu items were hand-selected for this event based on seasonal availability.<br><br>
+        Thank you, hope to see you there!
 </div>
 
 <div class="shadow p-3 mb-5 bg-body rounded" id="menuDiv">
-    <div id="mainCourseDiv">Main Course</div>
+    <div id="mainCourseDiv">Family Style Dinner</div>
     <ul class="nav nav-tabs" role="tabList" id="menuTabs">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="menuTabs-tab-1" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-1-content" type="button" role="tab" aria-controls="menuTabs-tab-1-content" aria-selected="true">Standard</button>
+            <button class="nav-link active" id="menuTabs-tab-1" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-1-content" type="button" role="tab" aria-controls="menuTabs-tab-1-content" aria-selected="true">Salad</button>
+        </li>
+
+         <li class="nav-item" role="presentation">
+            <button class="nav-link" id="menuTabs-tab-2" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-2-content" type="button" role="tab" aria-controls="menuTabs-tab-2-content" aria-selected="false">Appetizers</button>
         </li>
 
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="menuTabs-tab-2" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-2-content" type="button" role="tab" aria-controls="menuTabs-tab-2-content" aria-selected="false">Soy-Free</button>
+            <button class="nav-link" id="menuTabs-tab-3" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-3-content" type="button" role="tab" aria-controls="menuTabs-tab-3-content" aria-selected="false">Entree #1</button>
         </li>
 
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="menuTabs-tab-3" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-3-content" type="button" role="tab" aria-controls="menuTabs-tab-3-content" aria-selected="false">Gluten-Free</button>
+            <button class="nav-link" id="menuTabs-tab-4" data-bs-toggle="tab" data-bs-target="#menuTabs-tab-4-content" type="button" role="tab" aria-controls="menuTabs-tab-4-content" aria-selected="false">Entree #2</button>
         </li>
+
 
     </ul>
 
@@ -82,34 +100,44 @@
         <br>
         <div class="tab-pane fade show active" id="menuTabs-tab-1-content" role="tabpanel" aria-labelledby="menuTabs-tab-1-content" tabindex="0">
             <div class="card text-center" style="">
-                <img src="https://i.ibb.co/r6fxbt6/tofu-vegan.jpg" class="d-block w-100" alt="standard-option">
+                <img src="https://i.ibb.co/2snNDqr/specialsalad12.jpg" class="d-block w-100" alt="standard-option">
                 <div class="card-body">
-                    <p>Seasoned sesame tofu with mixed vegetables and rice.</p>
+                    <p>Fresh greens, tomatoes, and berries.</p>
                 </div>
             </div>
         </div>
 
         <div class="tab-pane fade" role="tabpanel" id="menuTabs-tab-2-content" aria-labelledby="menuTabs-tab-2-content" tabindex="0">
             <div class="card text-center">
-                <img src="https://i.ibb.co/8PbCYMG/pumpkin-filling-7.jpg" class="d-block w-100" alt="soy-free-option">
+                <img src="https://i.ibb.co/MZbcNr7/totellini-spoons.jpg" class="d-block w-100" alt="soy-free-option">
                 <div class="card-body">
-                    <p>Spiced pumpkin with filling.</p>
+                    <p>Selection of appetizers such as tortellini, spring rolls, spiced pumpkin soup.</p>
                 </div>
             </div>
         </div>
 
         <div class="tab-pane fade" role="tabpanel" id="menuTabs-tab-3-content" aria-labelledby="menuTabs-tab-3-content" tabindex="0">
             <div class="card text-center">
-                <img src="https://i.ibb.co/gWJbH4Z/springrolls.jpg" class="d-block w-100" alt="gluten-free-option">
+                <img src="https://i.ibb.co/r6fxbt6/tofu-vegan.jpg" class="d-block w-100" alt="soy-free-option">
                 <div class="card-body">
-                    <p>Spring rolls with spicy thai peanut sauce.</p>
+                    <p>Seasoned sesame tofu and rice.</p>
                 </div>
             </div>
         </div>
+
+        <div class="tab-pane fade" role="tabpanel" id="menuTabs-tab-4-content" aria-labelledby="menuTabs-tab-4-content" tabindex="0">
+            <div class="card text-center">
+                <img src="https://i.ibb.co/3pB5RJ0/veggie-strudel.jpg" class="d-block w-100" alt="gluten-free-option">
+                <div class="card-body">
+                    <p>Veggie strudel.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<div class="shadow p-3 mb-5 bg-body rounded" id="carouselDiv">
+<div class="shadow p-3 bg-body rounded" id="carouselDiv">
     <div id="appsDiv">Open bar, appetizers, and desserts!</div>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
         <div class="carousel-indicators">
@@ -128,7 +156,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="https://i.ibb.co/m5JYCKw/passed-app.jpg" class="d-block w-100" alt="passed-app">
+                <img src="https://i.ibb.co/GdPKGyS/springrolls.jpg" class="d-block w-100" alt="passed-app">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Fan-Favorite Appetizers</h5>
                     <p>Including french fries, tater tots, salads, wraps, and veggie platters.</p>
@@ -136,7 +164,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="https://i.ibb.co/grkG2Qz/passed-appetizers.jpg" class="d-block w-100" alt="passed-appetizers">
+                <img src="https://i.ibb.co/KLcSnZC/watermelon-gazpacho.jpg" class="d-block w-100" alt="passed-appetizers">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Special Desserts</h5>
                     <p>Tasteful, decadent, hand-crafted.</p>

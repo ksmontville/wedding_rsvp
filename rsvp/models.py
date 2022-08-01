@@ -5,7 +5,7 @@ from localflavor.us.models import USZipCodeField
 
 
 class Guest(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     city = models.CharField(max_length=100)
     state = USStateField(blank=True)

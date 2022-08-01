@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+      body {
+          padding: 0 24vw;
+      }
+
+      #navMain {
+          margin-left: 0.6vw;
+          margin-right: 0.6vw;
+
+      }
+
       .navbar-brand {
         font-family: Georgia;
         font-size: 6vw !important;
@@ -19,9 +29,32 @@
         color: #E9D5CA !important;
       }
 
+
+      #main {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+
+      }
+
+      #footer {
+
+          font-family: Georgia;
+          text-align: center;
+          background-color: #363062;
+          color: #E9D5CA;
+          /*padding: 0 16vw;*/
+          min-width: 48vw;
+          width: 100%;
+          margin-top: auto;
+      }
+
+
      @media (min-width: 600px) {
         .navbar-brand {
-            font-size: 1vw !important;
+            font-size: 2vw !important;
         }
 
         .nav-link {
@@ -32,14 +65,12 @@
 
   </style>
 
-    <title>Montova Celebration</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg" style="background-color: #363062;">
+  <nav id="navMain" class="navbar navbar-expand-lg" style="background-color: #363062;">
   <div class="container-fluid">
     <a class="navbar-brand" href="{% url 'rsvp:index' %}" aria-current="page"><i>LI & KM</i></a>
     <button class="navbar-toggler" style="background-color: white; color: #E9D5CA;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -52,14 +83,14 @@
         <a class="nav-link" href="{% url 'rsvp:events' %}"><i>Events</i><a>
         <a class="nav-link" href="{% url 'rsvp:travel' %}"><i>Travel</i></a>
         <a class="nav-link" href="{% url 'rsvp:registry' %}"><i>Registry</i></a>
-        <a class="nav-link" href="{% url 'rsvp:about_us' %}"><i>About Us</i></a>
+<!--        <a class="nav-link" href="{% url 'rsvp:about_us' %}"><i>About Us</i></a>-->
         <a class="nav-link" href="{% url 'rsvp:faqs' %}"><i>FAQs</i></a>
       </div>
     </div>
   </div>
 </nav>
 
-    <main role="main" class="container-fluid">
+    <main role="main" id="main" class="container-fluid">
         <div id="header">
             {% block page_header %}
             {% endblock page_header %}
@@ -69,6 +100,11 @@
             {% block content %}{% endblock content %}
         </div>
 
+        <div id="footer">
+            {% block page_footer %}
+            <small>Copyright Dr. Liza Ignatova and Kyle Montville, &copy; 2022 - 2023</small>
+            {% endblock page_footer %}
+        </div>
     </main>
 
 <!--HTML/BootStrap boilerplate-->
