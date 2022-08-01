@@ -50,7 +50,7 @@
             height: auto;
         }
 
-        span {
+        span small {
             margin-left: 14vw;
         }
 
@@ -115,45 +115,34 @@
         }
 
         @media (max-width: 600px) {
+            .primary-container {
+                flex-flow: column nowrap;
+
+            }
+
+            .flex-child-right-inner {
+                flex: 2;
+                font-size: 2.4vw;
+            }
+
+
+
             #accomDiv p{
                 font-size: 3vw;
                 color:#363063;
-                padding: 1vw 2vw;
+                padding: 1.2vw 3.2vw;
             }
 
-            #travelDiv {
-                flex-flow: row wrap;
-                font-size: 4vw;
-            }
-
-            .flex-container-travel {
-                font-size: 4vw;
-            }
-
-            .flex-child-left p {
-                flex-basis: auto;
-                font-size: 4vw;
-            }
-
-            .flex-child-right {
-                flex-basis: auto;
+             span small {
+                margin-left: 54vw;
             }
 
 
-            .flex-child-right-inner {
-                /*flex-wrap: wrap;*/
-                justify-content: center;
+            .btn-group-vertical a {
+                font-size: 2.4vw;
+                padding: 0;
             }
 
-
-            #travelDiv {
-            font-size: 1vw;
-            color: red;
-            }
-
-            h4 {
-            font-size: 2vw;
-            }
         }
 
 
@@ -167,7 +156,7 @@
 <div class="primary-container">
 
         <div class="flex-child-left">
-            <div class="shadow p-3 mb-5 bg-body rounded" id="accomDiv">
+            <div class="shadow p-3 mb-3 bg-body rounded" id="accomDiv">
                     <p>
                     Here you will find the address of the venue and select links to a variety of local accommodations
                     including AirBnB, hotels, and campsites near the beautiful Silver Lake State Park of Vermont.<br><br>
