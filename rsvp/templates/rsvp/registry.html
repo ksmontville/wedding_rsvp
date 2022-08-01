@@ -27,11 +27,11 @@
             flex-flow: row nowrap;
             justify-content: center;
             align-items: flex-start;
-            gap: 6.4vw;
+            gap: 1.2vw;
         }
 
         .flex-child-top {
-            flex: 2;
+            flex: 1;
             text-align: center;
             font-family: Georgia;
             font-size: 1.2vw;
@@ -44,8 +44,15 @@
 
         .flex-child-bot {
             flex: 1;
+            text-align: center;
+            font-family: Georgia;
+            font-size: 1.2vw;
+            color: #4D4C70;
         }
 
+        .flex-child-bot p{
+
+        }
 
         @media (max-width: 600px) {
             #donateDiv {
@@ -66,20 +73,22 @@
             <div id="donateDiv">Help Us Relocate!</div>
             <br>
             <img src="https://i.ibb.co/H2d87Mx/ggb-scaled.png" class="rounded-circle" alt="ggb-scaled">
-            <img src="https://i.ibb.co/5Lks5BK/beach-sc-scaled.jpg" class="rounded-circle" alt="beach-sc-scaled">
+<!--            <img src="https://i.ibb.co/5Lks5BK/beach-sc-scaled.jpg" class="rounded-circle" alt="beach-sc-scaled">-->
             <p>In lieu of a traditional registry, the couple will only be accepting donations to the moving fund,
             which will help them in their transition to their new lives on the west coast!</p>
-
         </div>
     </div>
 
     <div class="flex-child-bot">
         <div class="shadow p-3 mb-3 bg-body rounded">
+            <div id="donateDiv" style="margin-bottom: 1.4vw;">GoFundMe</div>
             <div class="gfm-embed" data-url="https://www.gofundme.com/f/um46f-the-moving-fund/widget/large/"></div>
             <script defer src="https://www.gofundme.com/static/js/embed.js"></script>
+            <p>While donations are never necessary, they are always welcome!</p>
         </div>
     </div>
 </div>
+
 
 
 {% endblock content %}

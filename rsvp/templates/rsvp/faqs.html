@@ -14,8 +14,16 @@
         }
 
         #mainAccordion {
+            order: 2;
+            flex: 2;
             border: 4px solid #E9D5CA;
             border-radius: 11px;
+        }
+
+        #aboutUsShadow {
+            order: 1;
+            flex: 1;
+            margin: 0;
         }
 
         .accordion-button {
@@ -26,7 +34,7 @@
         }
 
         .accordion-button:focus {
-            box-shadow: none;\
+            box-shadow: none;
         }
 
         .accordion-button::after {
@@ -41,15 +49,42 @@
         }
 
         .accordion-button:not(.collapsed)::After {
+            flex-shrink: 0;
             background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E9D5CA'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
         }
 
         .accordion-body {
             font-family: Georgia;
-            font-size: 20;
+            font-size: 20px;
             color: #827397;
         }
 
+         .primary-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 3.2vw;
+        }
+
+         .flex-child-left {
+         }
+
+         .nav-pills .nav-link.active {
+            background-color: #4D4C7D;
+
+        }
+
+        .card {
+            border: solid #E9D5CA 2px;
+        }
+
+        .d-block {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
 
         @media (max-width: 600px) {
 
@@ -61,100 +96,169 @@
 <body>
 
 <div class="" id="pageHeading">
-  <div id="faqDiv"><h1><i>Frequently Asked Questions</i></h1></div>
+  <div id="faqDiv"><h1><i>About Us & Frequently Asked Questions</i></h1></div>
 </div>
 
+<div class="primary-container">
+    <div class="shadow p-3 mb-3 bg-body rounded" id="aboutUsShadow">
+        <div class="flex-container" id="aboutUsContainer">
+            <div class="flex-child-left" id="flexChildLeft">
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills me-3" id="aboutUsTabs" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="aboutUsLizaTab" data-bs-toggle="pill" data-bs-target="#aboutUsLiza" type="button" role="tab" aria-controls="aboutUsLizaTab" aria-selected="true">Liza</button>
+                        <button class="nav-link" id="aboutUsKyleTab" data-bs-toggle="pill" data-bs-target="#aboutUsKyle" type="button" role="tab" aria-label="aboutUsKyleTab" aria-selected="false">Kyle</button>
+                        <button class="nav-link" id="aboutUsNellyTab" data-bs-toggle="pill" data-bs-target="#aboutUsNelly" type="button" role="tab" aria-label="aboutUsNellyTab" aria-selected="false">Nelly</button>
+                        <button class="nav-link" id="aboutUsMooseTab" data-bs-toggle="pill" data-bs-target="#aboutUsMoose" type="button" role="tab" aria-labelledby="aboutUsMooseTab" aria-selected="false">Moose</button>
+                    </div>
 
-<div class="accordion" id="mainAccordion">
+                    <div class="tab-content" id="aboutUsContent">
+                        <div class="tab-pane fade show active" id="aboutUsLiza" role="tabpanel" aria-labelledby="aboutUsLizaTab">
+                            <div class="card text-left" style="width: 16vw;">
+                                <img src="https://i.ibb.co/7t4vYxF/FB-IMG-1657560610070.jpg" class="d-block w-100 rounded" alt="babeWithCake">
+                                <div class="card-body">
+                                    <p>Liza is a graduate of UC San Diego where she studied neuroscience. <br><br>
+                                        From there, she worked as a medical assistant for some time before being accepted into Albany Medical College where she completed her M.D.<br><br>
+                                    Currently she is working as a pediatrics resident at Darthmouth-Hitchcock Medical Center, and hopes to land
+                                    a fellowship in adolescent medicine upon completion of residency in June 2023.</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="accordion-item" id="itemSeven">
-        <h2 class="accordion-header" id="headingSeven">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
-                  aria-expanded="false" aria-controls="collapseSeven" id="accordionButtonSeven">When and where did you meet?</button>
-        </h2>
-            <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
-                 data-bs-parent="#accordionExample">
-              <div class="accordion-body">The couple met in the summer of 2018 on an online dating website called OKCupid.
-              Kyle sent Liza a message about cats, they met shortly after for coffee and really hit it off
-                  (Kyle did not buy Liza her coffee at that first meeting, and he still hears about it to this day).
-                  From there the relationship quickly blossomed into marriage and a strong desire to own even more cats!
-              </div>
+                        <div class="tab-pane fade" id="aboutUsKyle" role="tabpanel" aria-labelledby="aboutUsKyleTab">
+                            <div class="card text-left" style="width: 16vw;">
+                                <img src="https://i.ibb.co/MfG7F7P/FB-IMG-1657560584805.jpg" class="d-block w-100 rounded" alt="kyleWithPlants">
+                                <div class="card-body">
+                                    <p>Kyle is a graduate of SUNY Albany where he dual-majored in physics and mathematics.
+                                        From there he attended Clarkson University where he earned a Master of Arts in Teaching.<br><br>
+                                    Kyle worked for six years as a high school science teacher before leaving the field to pursue a new career.<br><br>
+                                    Kyle is currently self-studying programming and web development in hopes of landing a position when he and Liza relocate to the west coast.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="aboutUsNelly" role="tabpanel" aria-labelledby="aboutUsNellyTab">
+                            <div class="card text-left" style="width: 16vw;">
+                                <img src="https://i.ibb.co/2t5Bxp2/PXL-20220325-195201523-MP.jpg" class="d-block w-100 rounded" alt="nellyOnStand">
+                                <div class="card-body">
+                                    <p>Chanel (Nelly) is a beautiful orange tabby with half a tail.<br><br>
+                                    A rescue from the streets of San Diego, she was adopted by Liza at one year of age
+                                    after losing her tail in a suspected car accident while raising a litter of kittens on her own. <br><br>
+                                    Nelly loves people but has little tolerance for other cats.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="aboutUsMoose" role="tabpanel" aria-labelledby="aboutUsMooseTab">
+                            <div class="card text-left" style="width: 16vw;">
+                                <img src="https://i.ibb.co/nCLwfmk/moose-in-bag.jpg" class="d-block w-100 rounded" alt="mooseInBag">
+                                <div class="card-body">
+                                    <p>Aramis (Moose) is a fabulous flame-point Siamese with a heart of gold.
+                                    Also a rescue from San Diego, this big boy spent only a day in the shelter before Liza scooped him up.<br><br>
+                                    While not the most intelligent creature on the planet, and often prone to rapid mood swings, this dopey boy
+                                    just wants to be petted and loved.<br><br>
+                                    While Moose enjoys the company of Nelly, Nelly would prefer that he not exist.</p>
+                                </div>
+                            </div>
+                        <div>
+                    </div>
+                </div>
             </div>
-    </div>
-
-    <div class="accordion-item" id="itemFive">
-        <h2 class="accordion-header" id="headingFive">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonFive">When did you get married?</button>
-        </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                 data-bs-parent="#accordionExample">
-              <div class="accordion-body">The couple was married in Manchester City Hall on July 20th, 2020.
-                  They were so excited to get married that they just couldn't wait for COVID-19 to pass!</div>
-            </div>
-    </div>
-
-    <div class="accordion-item" id="itemTwo">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonTwo">Will there be a ceremony?</button>
-    </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-             data-bs-parent="#accordionExample">
-          <div class="accordion-body">There will not be a formal ceremony in that sense. However, the couple will be
-          making a brief public declaration of their marriage near the beginning of the event.</div>
         </div>
-  </div>
-
-    <div class="accordion-item" id="itemOne">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-              aria-expanded="false" aria-controls="collapseOne" id="accordionButtonOne">What is the dress code?</button>
-    </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-             data-bs-parent="#accordionExample">
-          <div class="accordion-body" id="accordionBody">Black tie optional. The couple encourages guests to dress sharply for the evening,
-              but there is no expectation to wear a tuxedo or a gown.</div>
+        </div>
         </div>
     </div>
 
-    <div class="accordion-item" id="itemThree">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonThree">Why aren't you offering non-vegan menu options?</button>
-        </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                 data-bs-parent="#accordionExample">
-              <div class="accordion-body">Veganism is an important part of the couple's lives, and they want their
-                  guests to experience the many wonderful tastes and aromas of a curated, flavorful, and unique vegan menu. </div>
-            </div>
-    </div>
+    <div class="accordion" id="mainAccordion">
+        <div class="accordion-item" id="itemSeven">
+            <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                      aria-expanded="false" aria-controls="collapseSeven" id="accordionButtonSeven">When and where did you meet?</button>
+            </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                     data-bs-parent="#accordionExample">
+                  <div class="accordion-body">The couple met in the summer of 2018 on an online dating website called OKCupid.
+                  Kyle sent Liza a message about cats, they met shortly after for coffee and really hit it off
+                      (Kyle did not buy Liza her coffee at that first meeting, and he still hears about it to this day).
+                      From there the relationship quickly blossomed into marriage and a strong desire to own even more cats!
+                  </div>
+                </div>
+        </div>
 
-    <div class="accordion-item" id="itemFour">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonFour">What made you want to move to the west coast?</button>
-        </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                 data-bs-parent="#accordionExample">
-              <div class="accordion-body">The beautiful weather, of course!</div>
-            </div>
-    </div>
+        <div class="accordion-item" id="itemFive">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                      aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonFive">When did you get married?</button>
+            </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                     data-bs-parent="#accordionExample">
+                  <div class="accordion-body">The couple was married in Manchester City Hall on July 20th, 2020.
+                      They were so excited to get married that they just couldn't wait for COVID-19 to pass!</div>
+                </div>
+        </div>
 
-    <div class="accordion-item" id="itemSix">
-        <h2 class="accordion-header" id="headingSix">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
-                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonSix">
-                What will you be doing for work when you get there?</button>
+        <div class="accordion-item" id="itemTwo">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonTwo">Will there be a ceremony?</button>
         </h2>
-            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                  data-bs-parent="#accordionExample">
-              <div class="accordion-body">Liza will be working as a pediatrician specializing in adolescent medicine
-              and mental health. Kyle will be pursuing a new career in programming, web design, and/or data science.</div>
+              <div class="accordion-body">There will not be a formal ceremony in that sense. However, the couple will be
+              making a brief public declaration of their marriage near the beginning of the event.</div>
             </div>
+      </div>
+
+        <div class="accordion-item" id="itemOne">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne" id="accordionButtonOne">What is the dress code?</button>
+        </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body" id="accordionBody">Black tie optional. The couple encourages guests to dress sharply for the evening,
+                  but there is no expectation to wear a tuxedo or a gown.</div>
+            </div>
+        </div>
+
+        <div class="accordion-item" id="itemThree">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonThree">Why aren't you offering non-vegan menu options?</button>
+            </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                     data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Veganism is an important part of the couple's lives, and they want their
+                      guests to experience the many wonderful tastes and aromas of a curated, flavorful, and unique vegan menu. </div>
+                </div>
+        </div>
+
+        <div class="accordion-item" id="itemFour">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                      aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonFour">What made you want to move to the west coast?</button>
+            </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                     data-bs-parent="#accordionExample">
+                  <div class="accordion-body">The beautiful weather, of course!</div>
+                </div>
+        </div>
+
+        <div class="accordion-item" id="itemSix">
+            <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                      aria-expanded="false" aria-controls="collapseTwo" id="accordionButtonSix">
+                    What will you be doing for work when you get there?</button>
+            </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                     data-bs-parent="#accordionExample">
+                  <div class="accordion-body">Liza will be working as a pediatrician specializing in adolescent medicine
+                  and mental health. Kyle will be pursuing a new career in programming, web design, and/or data science.</div>
+                </div>
+        </div>
     </div>
 
 </div>
+
 
 
 
