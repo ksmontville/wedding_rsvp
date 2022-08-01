@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-      /*body {*/
-      /*    padding: 0 24vw;*/
-      /*}*/
+      body {
+          padding: 0 8vw;
+      }
 
       #navMain {
           margin-left: 0.6vw;
@@ -18,14 +18,14 @@
 
       .navbar-brand {
         font-family: Georgia;
-        font-size: 6vw !important;
+        font-size: 1.8vw !important;
         font-weight: lighter;
         color: #E9D5CA !important;
       }
 
       .nav-link {
         font-family: Georgia;
-        font-size: 4vw !important;
+        font-size: 1.4vw !important;
         color: #E9D5CA !important;
       }
 
@@ -40,21 +40,30 @@
       }
 
       #footer {
-
           font-family: Georgia;
           text-align: center;
           background-color: #363062;
           color: #E9D5CA;
-          /*padding: 0 16vw;*/
+          padding: 0.4vw 16vw;
           min-width: 48vw;
           width: 100%;
           margin-top: auto;
       }
 
 
-     @media (min-width: 600px) {
+     @media (max-width: 600px) {
         body {
-            padding: 0 24vw;
+            padding: 0;
+        }
+
+         #footer {
+             min-width: 100vw;
+         }
+
+         #navMain {
+          margin-left: 0;
+          margin-right: 0;
+
       }
 
         .navbar-brand {
@@ -106,7 +115,7 @@
 
         <div id="footer">
             {% block page_footer %}
-            <small>Copyright Dr. Liza Ignatova and Kyle Montville, &copy; 2022 - 2023</small>
+            <small>Dr. Liza Ignatova & Kyle Montville, &copy; 2022 - 2023</small>
             {% endblock page_footer %}
         </div>
     </main>
