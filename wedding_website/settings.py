@@ -65,6 +65,8 @@ MIDDLEWARE = [
     'lockdown.middleware.LockdownMiddleware',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
 LOCKDOWN_ENABLED = True
 LOCKDOWN_FORM = 'rsvp.forms.PasswordForm'
 LOCKDOWN_PASSWORDS = '052723'
