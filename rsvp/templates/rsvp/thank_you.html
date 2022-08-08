@@ -6,13 +6,25 @@
     <title>Thank You</title>
 
     <style>
-        h1 {
-            font-family: Garamond;
+         #pageHeading {
+            color: #4D4C7D;
             text-align: center;
+            font-family: Georgia;
+            font-size: 4vw;
+            margin: 8% 28%;
         }
+
+         @media (max-width: 600px) {
+             #pageHeading {
+                 font-size: 3.2vw;
+             }
+         }
     </style>
 </head>
 
-<h1>Thank you, we hope to see you soon!</h1>
+<div id="pageHeading">
+    <p>Thank you for RSVPing.</p>
+    <p>We can't wait to see you!</p>
+</div>
 
 {% endblock content %}
