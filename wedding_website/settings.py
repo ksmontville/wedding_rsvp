@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import decouple
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-v%9#o!nbywgwz6osp3i(ffrdz4u04a=yz$v*f_0g$#ik6wrdjq'
-SECRET_KEY = '-i3$r52xx1uh8()_*z0b837j%8090zaihf_7^iy1xs-ojoizc9'
+SECRET_KEY = decouple.config('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
